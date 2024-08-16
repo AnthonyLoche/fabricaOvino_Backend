@@ -3,8 +3,6 @@ from rest_framework.response import Response
 
 from backend.core.models import PregnancyDiagnosis, Sheep
 from backend.core.serializers import PregnancyDiagnosisSerializer
-
-
 class PregnancyDiagnosisViewSet(viewsets.ModelViewSet):
     lookup_field = "id"
 

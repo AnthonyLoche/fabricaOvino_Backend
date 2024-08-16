@@ -2,8 +2,6 @@ from backend.core.models import Lots
 from backend.core.serializers import LotsSerializer
 from rest_framework import status, viewsets
 from rest_framework.response import Response
-
-
 class LotsViewSet(viewsets.ModelViewSet):
     lookup_field = "id"
     queryset = Lots.objects.all()

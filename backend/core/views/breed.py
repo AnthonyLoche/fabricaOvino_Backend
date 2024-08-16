@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from backend.core.models import Breed
 from backend.core.serializers import BreedSerializer
 
-
 class BreedViewSet(viewsets.ModelViewSet):
     lookup_field = "id"
     queryset = Breed.objects.all()

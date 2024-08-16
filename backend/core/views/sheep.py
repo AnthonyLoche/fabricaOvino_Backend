@@ -4,8 +4,6 @@ from rest_framework.response import Response
 
 from backend.core.models import Sheep
 from backend.core.serializers import SheepDetailSerializer, SheepSerializer
-
-
 class SheepViewSet(viewsets.ModelViewSet):
     lookup_field = "id"
     queryset = Sheep.objects.all()

@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",
     "rest_framework",
-    "drf_yasg",
+    'drf_spectacular',
     "backend.core",
 ]
 
@@ -65,7 +65,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
-
 AUTHENTICATION_BACKENDS = ("rules.permissions.ObjectPermissionBackend", "django.contrib.auth.backends.ModelBackend")
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -92,7 +91,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-
 LANGUAGES = [("en", _("English")), ("pt-br", _("Portuguese"))]
 
 STATIC_URL = "/api/static/"
@@ -103,10 +101,21 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
     # "DEFAULT_PAGINATION_CLASS": "backend.core.pagination.CustomPageNumberPagination",
     # "PAGE_SIZE": 2,
 }
 
-SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header"}}}
+# SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header"}}}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'OvinoCultura',
+    'DESCRIPTION': 'Um projeto da fabrica para o gerenciamento da ovinocultura do IF',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,}
+
 
 GRAPH_MODELS = {"all_applications": True, "group_models": True}
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

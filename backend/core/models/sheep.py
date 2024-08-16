@@ -2,8 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from backend.core.models import Breed, Category, Lots
-
-
 class Sheep(models.Model):
     class Sex(models.TextChoices):
         FEMALE = "F", _("Female")
@@ -24,3 +22,9 @@ class Sheep(models.Model):
     pregnant = models.BooleanField(default=False)
     lactating = models.BooleanField(default=False)
     weight = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.earringNumber
+    class Meta:
+        verbose_name = ("Sheep")
+        verbose_name_plural = ("Sheeps")

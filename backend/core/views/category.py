@@ -4,8 +4,6 @@ from rest_framework.response import Response
 
 from backend.core.models import Category
 from backend.core.serializers import CategorySerializer
-
-
 class CategoryViewSet(viewsets.ModelViewSet):
     lookup_field = "id"
 

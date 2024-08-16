@@ -1,4 +1,4 @@
-from drf_yasg.utils import swagger_auto_schema
+# from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.exceptions import PermissionDenied
@@ -51,7 +51,7 @@ class UserViewSet(viewsets.ModelViewSet):
     @action(
         detail=False, url_path="logged",
     )
-    @swagger_auto_schema(responses={200: UserSerializer})
+    # @swagger_auto_schema(responses={200: UserSerializer})
     def logged(self, request):
         if not (request.user and request.user.is_authenticated):
             raise PermissionDenied()

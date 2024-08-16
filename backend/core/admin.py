@@ -4,7 +4,6 @@ from backend.core.models import Birth, Breed, Category, Lots, PregnancyDiagnosis
 
 # from django.contrib.auth.models import ContentType, Permission
 
-
 admin.site.register(User)
 admin.site.register(Birth)
 admin.site.register(Breed)

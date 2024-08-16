@@ -4,7 +4,6 @@ from rest_framework.response import Response
 from backend.core.models import Birth, Sheep
 from backend.core.serializers import BirthCreateSerializer, BirthDetailSerializer, SheepCreateNewbornSerializer
 
-
 class BirthViewSet(viewsets.ModelViewSet):
     queryset = Birth.objects.all()
     serializer_classes = {"list": BirthDetailSerializer, "create": BirthCreateSerializer}

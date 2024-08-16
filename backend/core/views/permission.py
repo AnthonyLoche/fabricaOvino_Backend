@@ -3,8 +3,6 @@ from django.db.models import Q
 from rest_framework import mixins, viewsets
 
 from backend.core.serializers import PermissionSerializer
-
-
 class PermissionViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     # queryset = Permission.objects.all()
     queryset = Permission.objects.filter(

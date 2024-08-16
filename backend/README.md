@@ -22,7 +22,8 @@ Para usar endpoints que necessitam de autenticação:
 
 ## Gerenciamento de dependências
 
-Os pacotes necessários para o funcionamento estão especificados no arquivo `pypoetry.toml`. Os requisitos não devem ser alterados manualmente. Em vez disso, o gestor de pacotes [Poetry](https://poetry.eustace.io/docs/) deve ser usado, pois verifica de forma mais rígida os requisitos de versão.
+<!-- Os pacotes necessários para o funcionamento estão especificados no arquivo `pypoetry.toml`. Os requisitos não devem ser alterados manualmente. Em vez disso, o gestor de pacotes [Poetry](https://poetry.eustace.io/docs/) deve ser usado, pois verifica de forma mais rígida os requisitos de versão. -->
+Modificar texto para falar que mudou para pdm
 
 ## Configurações
 
@@ -55,10 +56,10 @@ Tiramos proveito do uso de viewsets, para gerar URLs de forma padronizada, por m
 
 Para identificar e corrigir erros de programação e de formatação, utilizamos as ferramentas `flake8`, `black`, e `isort`.
 
-## Testing
+<!-- ## Testing
 
 Para executar os testes, utilizamos o `pytest`:
 
 ```sh
 poetry run pytest
-```
+``` -->
